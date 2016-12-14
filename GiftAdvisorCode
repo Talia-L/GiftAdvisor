@@ -1,0 +1,73 @@
+package giftAdvisor;
+
+
+import java.util.Scanner;  
+
+public class giftAdvisorCode 
+{
+	public static void main(String[] args) 
+	{ 
+	    Scanner keyboard = new Scanner(System.in); 
+	    
+	    String gender = null; 
+	    String spendthismuch = null; 
+	    
+	    String femalehigh = "Jewelery and/or Weekend Getaway"; 
+	    String femalemedium = "Perfume and/or Sweater"; 
+	    String femalelow  = "Wine and/or Selfie Stick"; 
+	    
+	    String malehigh = "Smart TV and/or Apple Watch";  
+	    String malemedium = "Guitar and/or Playstation";  
+	    String malelow = "Books and/or Shoes"; 
+	     
+	    
+	    System.out.println("Whats the recipient's gender?"); 
+	    gender = keyboard.next(); 
+	
+	    //*****FEMALE GIFT OPTIONS*****
+	  if (gender.equals ("female"))
+	  {
+	        System.out.println("How much are you willing to spend? (high, medium, low): "); 
+	        spendthismuch = keyboard.next(); 
+	         
+	        if(spendthismuch.equals("high"))
+	        	{ 
+	        	System.out.println("Here are some gift options for HER that fit your criteria: " +femalehigh);   
+	        	}
+	        
+	        else if(spendthismuch.equals("medium"))
+	        	{
+	            System.out.println("Here are some gift options for HER that fit your criteria: " +femalemedium);     
+	        	}
+	        
+	        else if(spendthismuch.equals("low"))
+	        	{
+	        	System.out.println("Here are some gift options for HER that fit your criteria: " +femalelow);
+	        	} 	        
+	  }
+	    
+	    //*****MALE GIFT OPTIONS*****
+	  else if (gender.equals ("male"))
+	  { 
+		  	System.out.println("How much are you willing to spend?"); 
+	        spendthismuch = keyboard.next(); 
+	        
+	        if(spendthismuch.equals("high"))
+	        	{ 
+	        	System.out.println("Here are some gift options for HIM that fit your criteria: " +malehigh);   
+	            }
+	        
+	        else if(spendthismuch.equals("medium"))
+	        	{
+	            System.out.println("Here are some gift options for HIM that fit your criteria: " +malemedium);     
+	        	}
+	        
+	        else if(spendthismuch.equals("low"))
+	        	{ 
+	            System.out.println("Here are some gift options for HIM that fit your criteria: " +malelow);
+	        	}              
+	  }
+    
+	} 
+}
+
